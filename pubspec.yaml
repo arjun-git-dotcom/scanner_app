@@ -38,6 +38,7 @@ dependencies:
   flutter_document_reader_core_mrz: ^9.2.1736
   flutter_face_api: ^8.1.765
   flutter_face_core_basic: ^8.1.365
+  flutter_bloc: ^9.1.1
 
 dev_dependencies:
   flutter_test:
