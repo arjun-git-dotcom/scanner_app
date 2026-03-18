@@ -39,6 +39,8 @@ dependencies:
   flutter_face_api: ^8.1.765
   flutter_face_core_basic: ^8.1.365
   flutter_bloc: ^9.1.1
+  path_provider: ^2.1.5
+  permission_handler: ^12.0.1
 
 dev_dependencies:
   flutter_test:
@@ -65,7 +67,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets\regula.license
-  #   - images/a_dot_ham.jpeg
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

@@ -13,6 +13,7 @@ const errorMessage = "Something went wrong. Please restart the app";
     try {
       ByteData license = await rootBundle.load("assets/regula.license");
       var config = InitConfig(license);
+      
       var (success, error) = await DocumentReader.instance.initialize(config);
       if (!success) {
         emit(SdkError(errorMessage));
