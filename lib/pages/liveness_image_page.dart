@@ -1,5 +1,4 @@
 import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 
 class LivenessImagePage extends StatefulWidget {
@@ -11,10 +10,10 @@ class LivenessImagePage extends StatefulWidget {
 }
 
 class _LivenessImagePageState extends State<LivenessImagePage> {
-  
+ 
+
   @override
   Widget build(BuildContext context) {
- 
     return Scaffold(
       body: Center(
         child: widget.image != null

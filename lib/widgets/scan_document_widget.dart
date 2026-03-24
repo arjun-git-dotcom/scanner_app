@@ -6,7 +6,25 @@ class ScanDocumentWidget {
   final BuildContext context;
   ScanDocumentWidget({required this.context});
 
+  void configureUI() async {
+    final c = DocumentReader.instance.customization;
+    final f = DocumentReader.instance.functionality;
+    c.backgroundMaskColor = Colors.amberAccent;
+    c.cameraFrameActiveColor = Colors.blue;
+    c.status = "Hello world";
+    c.statusTextFont = Font("sans-serif-thin", size: 14, style: FontStyle.BOLD);
+    c.statusTextColor = Colors.deepOrange;
+    c.cameraFrameShapeType = FrameShapeType.CORNER;
+
+    f.showCaptureButton = true;
+    f.showCameraSwitchButton = true;
+    f.showTorchButton = true;
+    f.showCaptureButtonDelayFromStart = 0;
+    f.showCaptureButtonDelayFromDetect = 0;
+  }
+
   Future<void> scanDocument() async {
+    configureUI();
     DocumentReader.instance.startScanner(
       ScannerConfig.withScenario(Scenario.MRZ),
       (action, results, error) async {
